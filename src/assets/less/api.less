@@ -1,0 +1,105 @@
+//
+// Api CSS
+// --------------------------------------------------
+.api {
+	width: 1000px;
+	margin: 15px auto;
+
+	.form {
+		width: 100%;
+		margin: 20px 0;
+
+		.result {
+			padding: 10px;
+			margin-right: 20px;
+			min-height: 100px;
+			background: #f1f4f2;
+		}
+
+		th, td {
+			padding: 10px 0;
+		}
+
+		td {
+			padding-left: 10px;
+		}
+
+	}
+
+	.option-group {
+		display: inline-block;
+		vertical-align: top;
+
+		> li {
+			position: relative;
+			float: left;
+
+			&:not(:first-child) {
+				margin-left: 5px;
+			}
+
+			&.short {
+				margin-left: 0;
+
+				.simple-datetimepicker-dropdown {
+					left: 19px;
+				}
+			}
+
+			.simple-datetimepicker-dropdown {
+				left: 83px;
+			}
+		}
+
+		.name {
+			float: left;
+			height: 24px;
+			line-height: 24px;
+			font-size: 12px;
+			color: #eafef0;
+			background-color: @main-green;
+			padding: 0 6px;
+			border-radius: 2px 0 0 2px;
+
+			&.min {
+				width: 28px;
+				text-align: center;
+				padding: 0;
+			}
+		}
+
+		.cell {
+			float: left;
+			height: 24px;
+			line-height: 24px;
+			font-size: 12px;
+			color: #fff;
+			padding: 0 6px;
+			background-color: @main-dark;
+			border: 0 none;
+			border-radius: 0 2px 2px 0;
+			outline: none;
+
+			&:hover {
+				background-color: @main-btn-hover-color;
+			}
+
+			&.nya-bs-select {
+				padding: 0;
+			}
+
+			&.radio {
+				width: 22px;
+
+				i {
+					top: 6px;
+					left: 5px;
+				}
+			}
+		}
+
+		input[type=text].cell {
+			width: 130px;
+		}
+	}
+}

@@ -1,0 +1,163 @@
+// Modal content
+.modal-content {
+	border: 0 none;
+	border-radius: 2px;
+	.box-shadow(0px 5px 31px 0px rgba(0, 0, 0, 0.1)) !important;
+}
+
+// Modal header
+.modal-header {
+	position: relative;
+	min-height: 38px;
+	padding: 0 20px 0 15px;
+	border: 0 none;
+	background-color: @modal-header-background-color;
+	border-bottom: 1px solid #ddd;
+	.border-top-radius(2px);
+
+	.modal-title {
+		line-height: 38px;
+		font-size: 14px;
+		color: @text-color;
+	}
+
+	.close {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 11px;
+		font-size: 16px;
+		margin: 0;
+		outline: none;
+		color: @text-color;
+		.opacity(.8);
+
+		&:hover {
+			.opacity(1);
+		}
+	}
+
+}
+
+// Modal footer
+.modal-footer {
+	padding: 12px 15px;
+	border-top-color: #ddd;
+	font-size: 0;
+
+	.btn + .btn {
+		margin-left: 10px;
+	}
+
+	.btn-ok,
+	.btn-cancel {
+		min-width: 80px;
+		height: 24px;
+		line-height: 22px;
+		padding: 0;
+		font-size: 12px;
+		text-align: center;
+	}
+
+	.btn-ok {
+		color: @main-green;
+		background-color: @main-dark;
+	}
+
+	.btn-cancel {
+		border: 1px solid @main-dark;
+		color: @main-dark;
+		background-color: #fff;
+	}
+
+}
+
+// Modal body
+.modal-body {
+	overflow: auto;
+	padding: 0 10px 15px;
+
+	&.padding {
+		padding: 15px 10px;
+	}
+
+	&.none-padding {
+		padding: 0;
+	}
+}
+
+.list-modal {
+
+	.nav {
+		padding: 0 10px;
+
+		> li {
+
+			> a {
+				margin-right: 0;
+				border-radius: 0;
+				border-top: 0;
+			}
+
+			&.active {
+				a {
+					border-top: 0;
+				}
+			}
+		}
+	}
+
+	.list-header {
+		display: table;
+		width: 100%;
+		border-bottom: 1px solid darken(@main-gray, 10%);
+		padding: 10px;
+
+		.buttons,
+		.more-buttons,
+		.search-group {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.buttons {
+			text-align: left;
+			padding-left: 15px;
+		}
+
+		.more-buttons {
+			text-align: right;
+
+			.btn {
+				margin-left: 8px;
+				margin-right: 0;
+			}
+		}
+
+		.search-group {
+			text-align: left;
+		}
+	}
+
+	.list-content {
+		.clearfix();
+
+		.category-box {
+			float: left;
+			width: 220px;
+			padding: 5px 10px;
+		}
+
+		.table-list {
+			float: left;
+			width: calc(~"100% - 220px");
+			padding: 0;
+			border-left: 1px solid darken(@main-gray, 10%);
+		}
+
+		.scrolling-table {
+			border-bottom: 1px solid darken(@main-gray, 10%);
+		}
+
+	}
+}

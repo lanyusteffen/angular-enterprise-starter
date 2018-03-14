@@ -1,0 +1,71 @@
+// Pagination
+.pagination-bar {
+	position: relative;
+	padding: 10px 0;
+
+	.total {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+
+		em {
+			font-style: normal;
+			color: @main-green;
+			margin: 0 2px;
+		}
+
+	}
+
+	.per-page {
+		width: auto;
+		vertical-align: middle;
+
+		.dropdown-menu {
+			top: inherit;
+			bottom: calc(~"100% + 1px");
+
+			&.inner {
+				top: inherit;
+				bottom: 0;
+			}
+
+		}
+
+	}
+
+	.pagination {
+		vertical-align: middle;
+		margin: 0;
+
+		> li {
+
+			> a {
+				color: @text-color;
+				height: 24px;
+				line-height: 24px;
+				padding-top: 0;
+				padding-bottom: 0;
+				border-radius: 4px;
+
+				&:hover,
+				&:focus,
+				&:active,
+				&.active {
+					background-color: @main-gray;
+				}
+
+			}
+
+			&.active {
+				a {
+					color: #fff;
+					background-color:  @main-blue;
+					border-color: @main-blue;
+				}
+
+			}
+
+		}
+	}
+
+}
