@@ -19,8 +19,14 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "assets/less/app.css"
       ],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "assets/less",
+          "UI"
+        ]
+      },
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
