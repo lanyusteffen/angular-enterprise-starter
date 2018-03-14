@@ -1,0 +1,120 @@
+//
+// Container CSS
+// --------------------------------------------------
+.main-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+
+	.main-tabs {
+		background-color: #fff;
+	}
+
+	.main-tab-content {
+		flex: 1;
+
+		.content-container {
+			background-color: #fff;
+		}
+
+		.content-header {
+			font-size: 0;
+
+			.btn {
+				margin-right: 8px;
+			}
+
+			.form {
+				white-space: nowrap;
+
+				td {
+					min-width: 80px;
+				}
+
+			}
+
+		}
+
+		.content-header {
+			display: table;
+			width: 100%;
+			padding: 8px 10px;
+			border-bottom: 1px solid darken(@main-gray, 10%);
+
+			.buttons,
+			.more-buttons,
+			.search-group {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			.buttons {
+				text-align: left;
+				padding-left: 15px;
+			}
+
+			.more-buttons {
+				text-align: right;
+
+				.btn {
+					margin-left: 8px;
+					margin-right: 0;
+				}
+			}
+
+			.search-group {
+				text-align: left;
+			}
+
+			.invoice-code {
+				font-size: 12px;
+			}
+
+			.show-more-btn {
+				padding: 4px 6px;
+				text-decoration: none;
+				border: 1px solid @form-input-border-color;
+				transition: border-color .3s ease;
+
+				&:hover {
+					border-color: @main-blue;
+				}
+			}
+		}
+
+		.content-body {
+			.clearfix();
+
+			.category-box {
+				float: left;
+				width: 250px;
+				padding: 5px 10px;
+			}
+
+			.table-list {
+				float: left;
+				width: calc(~"100% - 250px");
+				padding: 0;
+				border-left: 1px solid darken(@main-gray, 10%);
+			}
+
+			.scrolling-table {
+				border-bottom: 1px solid darken(@main-gray, 10%);
+			}
+
+		}
+
+		.tools-bar {
+			padding: 10px;
+			margin-bottom: 10px;
+
+			&.buttons {
+				padding: 20px 10px 10px;
+				margin: 0;
+			}
+
+		}
+
+	}
+
+}

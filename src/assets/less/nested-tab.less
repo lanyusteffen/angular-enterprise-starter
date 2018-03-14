@@ -1,0 +1,51 @@
+.nested-tab {
+	display: flex;
+	height: 100%;
+	
+	.nav-tabs {
+		display: flex;
+		flex-direction: column;
+		border-bottom: 0;
+		border-right: 1px solid #f2f6f7;
+		padding: 0 20px;
+
+		> li {		
+			margin: 0;
+
+			> a {
+				display: block;
+				text-align: center;
+				margin-right: 0;
+				line-height: normal;
+				padding: 10px 0;
+				border-radius: 0;
+				border: 0;
+				border-bottom: 1px solid transparent;
+				color: @text-color;
+
+				&:hover {
+					background: transparent;
+					border-color: transparent;
+					color: @main-green;
+				}
+			}
+
+			&.active {
+
+				a,
+				a:focus,
+				a:hover {
+					background: transparent;
+					color: @main-green;
+					border: 0;
+					border-bottom: 1px solid @main-green;
+				}
+			}
+		}
+	}
+
+	.nested-tab-content {
+		flex: 1;
+	}
+
+}

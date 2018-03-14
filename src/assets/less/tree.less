@@ -1,0 +1,152 @@
+.tree {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: normal;
+
+  li {
+    position: relative;
+    padding-left: 18px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 8px;
+      bottom: 0;
+      width: 1px;
+      background-color: #ddd;
+      z-index: 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 8px;
+      height: 1px;
+      width: 10px;
+      background-color: #ddd;
+      z-index: 0;
+    }
+
+    &:first-child:before {
+      top: 0;
+    }
+
+  }
+
+  node {
+
+    &:first-child > li:before {
+      top: 12px;
+    }
+
+    &:last-child > li:before {
+      height: 12px;
+    }
+
+    &:first-child:last-child > li:before {
+      height: 0;
+    }
+  }
+
+  .fa {
+    font-size: 12px;
+  }
+
+  .folder-icon,
+  .name {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .trigger-icon {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    color: #b0b0b0;
+    width: 18px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    z-index: 1;
+
+    &:before {
+      background-color: #fff;
+    }
+  }
+
+  .folder-icon {
+    width: 18px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin-left: 2px;
+    color: @text-color;
+
+    &.leaf {
+      &:before {
+        content: "\f0f6" !important;
+      }
+    }
+  }
+
+  .name {
+    max-width: 85%;
+    height: 18px;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 3px 0;
+    padding: 0 4px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    &.selected {
+      color: #fff;
+      border-radius: 2px;
+      background-color: @main-blue;
+      border-color: darken(@main-blue, 10%);
+    }
+  }
+
+  .open {
+
+    > tree-node > .tree {
+      display: block;
+    }
+
+    > .trigger-icon {
+      &:before {
+        content: "\f146";
+      }
+    }
+
+    > .folder-icon {
+      &:before {
+        content: "\f07c";
+      }
+    }
+  }
+
+  .tree {
+    display: none;
+    margin-left: 2px;
+
+    node {
+
+      &:first-child > li:before {
+        top: 0;
+      }
+
+      &:first-child:last-child > li:before {
+        height: 12px;
+      }
+    }
+  }
+}
