@@ -19,7 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "assets/less/app.css"
+        "assets/less/xx.less"
       ],
       "stylePreprocessorOptions": {
         "includePaths": [
